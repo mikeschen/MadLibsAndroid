@@ -18,6 +18,7 @@ public class MadLibActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String adjective1 = intent.getStringExtra("adjective1");
         String nationality = intent.getStringExtra("nationality");
-        mAdjective1TextView.setText("Pizza was invented by a " + adjective1 + " " + nationality);
+        String person = intent.getStringExtra("person");
+        mAdjective1TextView.setText("Pizza was invented by a " + adjective1 + " " + nationality + " chef named " + person + ".");
     }
 }

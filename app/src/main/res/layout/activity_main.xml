@@ -36,4 +36,13 @@
         android:layout_below="@+id/adjective1EditText"
         android:layout_alignLeft="@+id/adjective1EditText"
         android:layout_alignStart="@+id/adjective1EditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/personEditText"
+        android:hint="Person"
+        android:layout_below="@+id/nationalityEditText"
+        android:layout_alignLeft="@+id/nationalityEditText"
+        android:layout_alignStart="@+id/nationalityEditText" />
 </RelativeLayout>
