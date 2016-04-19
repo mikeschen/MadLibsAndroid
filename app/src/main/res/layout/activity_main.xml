@@ -23,11 +23,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/adjective1EditText"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/readMadLibButton"
-        android:layout_toStartOf="@+id/readMadLibButton"
         android:hint="Adjective"
-        />
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/readMadLibButton"
+        android:layout_toStartOf="@+id/readMadLibButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nationalityEditText"
+        android:hint="Nationality"
+        android:layout_below="@+id/adjective1EditText"
+        android:layout_alignLeft="@+id/adjective1EditText"
+        android:layout_alignStart="@+id/adjective1EditText" />
 </RelativeLayout>

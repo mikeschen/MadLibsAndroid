@@ -10,9 +10,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = MainActivity.class.getSimpleName();
     private Button mReadMadLibButton;
     private EditText mAdjective1EditText;
+    private EditText mNationalityEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +20,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mAdjective1EditText = (EditText) findViewById(R.id.adjective1EditText);
+        mNationalityEditText = (EditText) findViewById(R.id.nationalityEditText);
         mReadMadLibButton = (Button) findViewById(R.id.readMadLibButton);
         mReadMadLibButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v) {
                 String adjective1 = mAdjective1EditText.getText().toString();
-                Log.d(TAG, adjective1);
+                String nationality = mNationalityEditText.getText().toString();
                 Intent intent = new Intent(MainActivity.this, MadLibActivity.class);
+                intent.putExtra("adjective1", adjective1);
+                intent.putExtra("nationality", nationality);
                 startActivity(intent);
             }
         });
